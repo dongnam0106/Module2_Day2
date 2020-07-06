@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class PrintEffigy {
     public static void main(String[] args) {
-        int choice;
+        int choice, width, height;
         Scanner input = new Scanner(System.in);
 
         System.out.println("Menu");
@@ -15,9 +15,9 @@ public class PrintEffigy {
         System.out.println("Enter your choice: ");
         choice = input.nextInt();
         System.out.println("Enter width: ");
-        int width = input.nextInt();
+        width = input.nextInt();
         System.out.println("Enter height: ");
-        int height = input.nextInt();
+        height = input.nextInt();
 
         switch (choice){
             case 1:
@@ -27,6 +27,7 @@ public class PrintEffigy {
                     }
                     System.out.println();
                 }
+                break;
             case 2:
                 for (int i = 0; i <= height; i++){
                     for ( int j = 0; j <= i; j++){
@@ -34,6 +35,7 @@ public class PrintEffigy {
                     }
                     System.out.println();
                 }
+                break;
             case 3:
                 for (int i = 1; i <= height; i++){
                     for(int j = 1; j <= height - i; j++){
@@ -44,6 +46,20 @@ public class PrintEffigy {
                     }
                     System.out.println();
                 }
+                break;
+        }
+        while (choice!=0){
+            System.out.println("Menu");
+            System.out.println("1. Print the rectangle");
+            System.out.println("2. Print the square triangle");
+            System.out.println("3. Print isosceles triangle");
+            System.out.println("0. Exit");
+            System.out.println("Enter your choice: ");
+            choice = input.nextInt();
+            System.out.println("Enter width: ");
+            width = input.nextInt();
+            System.out.println("Enter height: ");
+            height = input.nextInt();
         }
     }
 }
